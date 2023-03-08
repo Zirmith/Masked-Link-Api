@@ -39,7 +39,7 @@ function loadLinks() {
           Object.values(response.data).forEach(function(link) {
             const row = $('<tr>');
             row.append($('<td>').html(`<a href="/server/data/${link.code}">https://masked-api.onrender.com/server/data/${link.code}</a>`));
-            row.append($('<td>').text(link.hashedUrl));
+            row.append($('<td>').text(link.originalUrl));
             linkTableBody.append(row);
             loadedLinks++;
             const progress = (loadedLinks / linkCount) * 100;
