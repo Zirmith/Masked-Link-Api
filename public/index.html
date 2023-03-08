@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Masked Link Dashboard</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/styles.css">
+  </head>
+  <body>
+    <div class="loader">
+      <div class="loader-text">Masked</div>
+      <div class="loader-progress-container">
+        <div class="loader-progress"></div>
+        <div class="loader-progress-text"></div>
+      </div>
+    </div>
+    
+    
+    <div class="container">
+      <h1>Masked Link Dashboard</h1>
+      <p>Shorten your links and keep them private with Masked Link.</p>
+      <form id="link-form">
+        <div class="form-group">
+          <label for="url-input">URL to shorten:</label>
+          <input type="text" class="form-control" id="url-input" placeholder="Enter URL">
+        </div>
+        <button type="submit" class="btn btn-primary">Shorten Link</button>
+      </form>
+      <hr>
+      <h2>Database</h2>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Short URL</th>
+            <th>Original URL</th>
+          </tr>
+        </thead>
+        <tbody id="link-table-body">
+        </tbody>
+      </table>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="/js/script.js"></script>
+  </body>
+</html>
